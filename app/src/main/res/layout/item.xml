@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.thanhdt.a2048.Square
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/point"
+        android:id="@+id/txtSquare"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:layout_margin="1dp"
+        >
+    </com.thanhdt.a2048.Square>
+</LinearLayout>
