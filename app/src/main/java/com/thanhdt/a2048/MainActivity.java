@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.Gallery;
 import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -62,21 +63,33 @@ public class MainActivity extends AppCompatActivity {
                             if(event.getX()>X){//right
                                 GamePlay.getGamePlay().swipeRight();
                                 update();
+                                if(GamePlay.getGamePlay().isGameOver()){
+                                    Toast.makeText(MainActivity.this, "You lose", Toast.LENGTH_LONG).show();
+                                }
                             }
                             else if(event.getX()<X){//left
                                 GamePlay.getGamePlay().swipeLeft();
                                 update();
+                                if(GamePlay.getGamePlay().isGameOver()){
+                                    Toast.makeText(MainActivity.this, "You lose", Toast.LENGTH_LONG).show();
+                                }
                             }
                         }else{
                             //up
                             if(event.getY()>Y){
                                 GamePlay.getGamePlay().swipeUp();
                                 update();
+                                if(GamePlay.getGamePlay().isGameOver()){
+                                    Toast.makeText(MainActivity.this, "You lose", Toast.LENGTH_LONG).show();
+                                }
                             }
                             //down
                             else{
                                 GamePlay.getGamePlay().swipeDown();
                                 update();
+                                if(GamePlay.getGamePlay().isGameOver()){
+                                    Toast.makeText(MainActivity.this, "You lose", Toast.LENGTH_LONG).show();
+                                }
                             }
                         }
                         break;

@@ -296,4 +296,33 @@ public class GamePlay {
             best.setText(score.getText()+"");
         }
     }
+    public boolean isGameOver(){
+        for(int i=0;i<listNumber.size();i++){
+            if(listNumber.get(i)==0)
+                return false;
+        }
+        for(int i=mode-1;i>=0;i--){
+            for(int j=mode-1;j>=0;j--){
+                int fnum=matrix[i][j];
+                if(fnum==0){
+                    continue;
+                }else {
+                    for(int k =j-1;k>=0;k--){
+                        int sNum = matrix[i][k];
+                        if(sNum==0){
+                            continue;
+                        }else{
+                            if(sNum==fnum){
+                                return false;
+
+                            }else {
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return true;
+    }
 }
