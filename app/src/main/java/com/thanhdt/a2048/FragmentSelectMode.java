@@ -12,6 +12,7 @@ import androidx.fragment.app.DialogFragment;
 
 public class FragmentSelectMode extends DialogFragment {
     private Button button4, button6, button8, button10;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -23,28 +24,28 @@ public class FragmentSelectMode extends DialogFragment {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity)getActivity()).selectMode.setText("4X4");
+                ((MainActivity) getActivity()).selectMode.setText("4X4");
                 getDialog().dismiss();
             }
         });
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity)getActivity()).selectMode.setText("6X6");
+                ((MainActivity) getActivity()).selectMode.setText("6X6");
                 getDialog().dismiss();
             }
         });
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity)getActivity()).selectMode.setText("8X8");
+                ((MainActivity) getActivity()).selectMode.setText("8X8");
                 getDialog().dismiss();
             }
         });
         button10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity)getActivity()).selectMode.setText("10X10");
+                ((MainActivity) getActivity()).selectMode.setText("10X10");
                 getDialog().dismiss();
             }
         });

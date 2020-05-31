@@ -25,6 +25,7 @@ public class Adapter extends ArrayAdapter<Integer> {
     }
 
     private ArrayList<Integer> list;
+
     public Adapter(@NonNull Context context, int resource, List<Integer> objects, int mode) {
         super(context, resource, objects);
         this.context = context;
@@ -41,12 +42,12 @@ public class Adapter extends ArrayAdapter<Integer> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        if(convertView == null){
+        if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.item, null);
         }
 
-        if(list.size()>0){
+        if (list.size() > 0) {
             Square square = convertView.findViewById(R.id.txtSquare);
             square.setValue(list.get(position), mode);
 
